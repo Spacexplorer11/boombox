@@ -1,3 +1,10 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+html, body {
+    background-image: url(/images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overscroll-behavior: none;
+}
