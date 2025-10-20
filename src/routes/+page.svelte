@@ -1,4 +1,5 @@
 <script>
+	import { goto } from "$app/navigation";
 </script>
 
 <sveltekit:head>
@@ -16,11 +17,18 @@
 	</header>
 	<main class="@container/main">
 		<div class="@container/boombox min-w-full">
-			<img
-				src="/images/boombox.webp"
-				alt="BoomBox"
-				class="mx-auto my-4 aspect-[16/9] w-full object-cover"
-			/>
+			<button
+				class="w-full"
+				aria-label="Go to BoomBox Buttons Page"
+				title="Go to BoomBox Buttons Page"
+				onclick={goto("/boombox-buttons")}
+			>
+				<img
+					src="/images/boombox.webp"
+					alt="BoomBox"
+					class="mx-auto my-4 aspect-[16/9] w-full object-cover"
+				/>
+			</button>
 		</div>
 	</main>
 </div>
