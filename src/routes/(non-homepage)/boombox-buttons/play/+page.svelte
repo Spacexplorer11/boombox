@@ -28,17 +28,14 @@
 </script>
 
 <sveltekit:head>
-	<title>BoomBox - Buttons</title>
-	<meta
-		name="description"
-		content="BoomBox - In the most literal sense ever. This is based on the Kurzgesagt fandom!"
-	/>
+	<title>BoomBox - Play</title>
+	<meta name="description" content="BoomBox - LAUNCH" />
 </sveltekit:head>
 <div class="@container flex flex-col">
 	<header class="@container/header text-center text-red-950">
-		<h1 class="text-4xl md:text-5xl">BoomBox - Buttons</h1>
-		<h3 class="text-2xl md:text-3xl">A bunch of random buttons doing random things</h3>
-		<h3 class="text-2xl md:text-3xl">Caution! Be prepared</h3>
+		<h1 class="text-4xl md:text-5xl">BoomBox - Play</h1>
+		<h3 class="text-2xl md:text-3xl">Launch TNT</h3>
+		<h3 class="text-2xl md:text-3xl">Don't be afraid!</h3>
 	</header>
 	<main class="@container/main mt-10 flex flex-col text-center">
 		<label for="megatonnes" class="text-2xl text-red-950 md:text-3xl"
