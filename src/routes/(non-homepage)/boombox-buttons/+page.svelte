@@ -1,4 +1,5 @@
 <script>
+	import { goto } from "$app/navigation";
 </script>
 
 <sveltekit:head>
@@ -16,7 +17,10 @@
 	</header>
 	<main class="@container/main">
 		<div class="@container/side-by-side mt-10 flex flex-row">
-			<button class="mx-auto max-w-fit rounded-2xl bg-amber-500 p-4 text-5xl">Play</button>
+			<button
+				class="mx-auto max-w-fit rounded-2xl bg-amber-500 p-4 text-5xl"
+				onclick={goto("/boombox-buttons/play")}>Play</button
+			>
 			<button class="mx-auto max-w-fit rounded-2xl bg-amber-500 p-4 text-5xl">Record</button>
 		</div>
 	</main>
