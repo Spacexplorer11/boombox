@@ -5,6 +5,7 @@
 	let explosion = "";
 	let launch = "";
 	let megatonnesInput = "";
+	let randGen = "";
 	let launcherText = $state("are gonna throw");
 	let launchEligible = $derived.by(() => {
 		if (megatonnes > 0) {
@@ -24,6 +25,7 @@
 		explosion = document.getElementById("explosion");
 		launch = document.getElementById("launch");
 		megatonnesInput = document.getElementById("megatonnes");
+		randGen = document.getElementById("rand-gen");
 	});
 </script>
 
@@ -62,20 +64,32 @@
 				<em>(Enter a positive number > 0)</em>
 			</p>
 		{/if}
-		<button
-			id="launch"
-			aria-label="confirm"
-			class="mx-auto max-w-fit rounded-2xl bg-green-700 p-4 text-red-500 not-disabled:hover:translate-y-1 not-disabled:hover:scale-[1.03] not-disabled:hover:shadow-2xl active:bg-green-800 disabled:cursor-not-allowed disabled:bg-gray-600"
-			disabled={launchEligible}
-			onclick={() => {
-				explosion.style.visibility = "visible";
-				launch.style.visibility = "hidden";
-				megatonnesInput.disabled = "disabled";
-				launcherText = "threw";
-			}}
-		>
-			{buttonText}
-		</button>
+		<div class="@container/buttons mx-auto flex min-w-full flex-row">
+			<button
+				id="launch"
+				aria-label="confirm"
+				class="mx-auto max-w-fit rounded-2xl bg-green-700 p-4 text-red-500 not-disabled:hover:translate-y-1 not-disabled:hover:scale-[1.03] not-disabled:hover:shadow-2xl active:bg-green-800 disabled:cursor-not-allowed disabled:bg-gray-600"
+				disabled={launchEligible}
+				onclick={() => {
+					explosion.style.visibility = "visible";
+					launch.style.visibility = "hidden";
+					megatonnesInput.disabled = "disabled";
+					launcherText = "threw";
+					randGen.style.visibility = "hidden";
+				}}
+			>
+				{buttonText}
+			</button>
+			<button
+				id="rand-gen"
+				class="mx-auto max-w-fit rounded-2xl bg-green-700 p-4 text-red-500 hover:translate-y-1 hover:scale-[1.03] hover:shadow-2xl active:bg-green-800"
+				onclick={() => {
+					megatonnes = Math.floor(Math.random() * 1000) + 1;
+				}}
+			>
+				Generate random!
+			</button>
+		</div>
 		<iframe
 			id="explosion"
 			style="visibility: hidden;"
@@ -84,7 +98,6 @@
 			height="315"
 			src="https://www.youtube.com/embed/tQ3qPEbbqmg?autoplay=1&mute=1&controls=0"
 			title="YouTube video player"
-			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 			referrerpolicy="strict-origin-when-cross-origin"
 			allowfullscreen
