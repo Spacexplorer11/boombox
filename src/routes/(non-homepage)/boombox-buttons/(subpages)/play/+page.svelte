@@ -48,6 +48,7 @@
 			class="mx-auto w-20 invalid:outline-red-500 disabled:cursor-not-allowed"
 			bind:value={megatonnes}
 			type="number"
+			min="1"
 		/>
 		{#if megatonnes !== null && megatonnes > 1 && megatonnes !== ""}
 			<p class="mx-auto max-w-fit text-2xl text-green-700 text-shadow-2xs md:text-3xl">
