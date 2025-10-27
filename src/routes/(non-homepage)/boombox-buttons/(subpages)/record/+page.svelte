@@ -90,6 +90,13 @@
 			<h3 class="my-10 text-2xl text-red-950 md:text-4xl">
 				You got {score}/{questions.length} correct!
 			</h3>
+			{#if score === questions.length}
+				<h3 class="my-10 text-2xl text-red-950 md:text-4xl">Perfect Score! Well done!</h3>
+			{:else if score >= questions.length / 2}
+				<h3 class="my-10 text-2xl text-red-950 md:text-4xl">Good job! You did well!</h3>
+			{:else}
+				<h3 class="my-10 text-2xl text-red-950 md:text-4xl">Better luck next time!</h3>
+			{/if}
 			<h3 class="my-10 text-2xl text-red-950 md:text-4xl">Wanna go again?</h3>
 			<button
 				class="mx-auto my-2 max-w-fit rounded-2xl bg-purple-600
