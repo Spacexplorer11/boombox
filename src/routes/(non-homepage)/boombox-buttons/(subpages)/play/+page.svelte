@@ -2,10 +2,10 @@
 	import { onMount } from "svelte";
 
 	let megatonnes = $state(0);
-	let explosion = "";
-	let launch = "";
-	let megatonnesInput = "";
-	let randGen = "";
+	let explosionElement = "";
+	let launchElement = "";
+	let megatonnesInputElement = "";
+	let randGenElement = "";
 	let launcherText = $state("are gonna throw");
 	let launchEligible = $derived.by(() => {
 		if (megatonnes > 0) {
@@ -22,10 +22,10 @@
 		}
 	});
 	onMount(() => {
-		explosion = document.getElementById("explosion");
-		launch = document.getElementById("launch");
-		megatonnesInput = document.getElementById("megatonnes");
-		randGen = document.getElementById("rand-gen");
+		explosionElement = document.getElementById("explosion");
+		launchElement = document.getElementById("launch");
+		megatonnesInputElement = document.getElementById("megatonnes");
+		randGenElement = document.getElementById("rand-gen");
 	});
 </script>
 
@@ -72,11 +72,11 @@
 				class="mx-auto max-w-fit rounded-2xl bg-green-700 p-4 text-red-500 not-disabled:hover:translate-y-1 not-disabled:hover:scale-[1.03] not-disabled:hover:shadow-2xl active:bg-green-800 disabled:cursor-not-allowed disabled:bg-gray-600"
 				disabled={launchEligible}
 				onclick={() => {
-					explosion.style.visibility = "visible";
-					launch.style.visibility = "hidden";
-					megatonnesInput.disabled = "disabled";
+					explosionElement.style.visibility = "visible";
+					launchElement.style.visibility = "hidden";
+					megatonnesInputElement.disabled = "disabled";
 					launcherText = "threw";
-					randGen.style.visibility = "hidden";
+					randGenElement.style.visibility = "hidden";
 				}}
 			>
 				{buttonText}
