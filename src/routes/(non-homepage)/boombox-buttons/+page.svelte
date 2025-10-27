@@ -21,7 +21,10 @@
 				class="mx-auto max-w-fit rounded-2xl bg-amber-500 p-4 text-5xl"
 				onclick={goto("/boombox-buttons/play")}>Play</button
 			>
-			<button class="mx-auto max-w-fit rounded-2xl bg-amber-500 p-4 text-5xl">Record</button>
+			<button
+				class="mx-auto max-w-fit rounded-2xl bg-amber-500 p-4 text-5xl"
+				onclick={goto("/boombox-buttons/record")}>Record</button
+			>
 		</div>
 	</main>
 </div>
