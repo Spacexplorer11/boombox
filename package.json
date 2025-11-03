@@ -26,6 +26,6 @@
 		"vite": "^7.1.12"
 	},
 	"dependencies": {
-		"@lucide/svelte": "^0.548.0"
+		"@lucide/svelte": "^0.552.0"
 	}
 }
