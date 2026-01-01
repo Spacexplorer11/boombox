@@ -19,8 +19,8 @@ Just go to the [website](https://boombox.akaalroop.com) and have fun!
 1. Clone the repository
 2. Do `npm install` or `bun install` (recommended) to install all dependencies
 3. Run `npm run dev` or `bun dev` to start the development server
-4. Open `http://localhost:3000` in your browser
+4. Open `http://localhost:5173` in your browser
 5. Enjoy!
 6. To build for production, run `npm run build` or `bun build` and then `npm start` or `bun start`
-7. Your production server will be running on `http://localhost:3000`
+7. Your production server will be running on `http://localhost:4173`
 8. If you wanna edit the code, read the svelte docs [here](https://svelte.dev/docs)
